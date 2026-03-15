@@ -1,0 +1,214 @@
+.page { animation: fadeIn 0.35s ease; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.newBtn {
+  padding: 10px 20px;
+  background: var(--accent-cyan);
+  color: var(--bg-void);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.newBtn:hover { background: #33ddff; box-shadow: var(--shadow-glow-cyan); }
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 32px 0;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-dim);
+  border-top-color: var(--accent-cyan);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+.error {
+  padding: 16px;
+  background: rgba(255, 56, 96, 0.08);
+  border: 1px solid rgba(255, 56, 96, 0.2);
+  border-radius: var(--radius-md);
+  color: var(--accent-red);
+  font-size: 13px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 80px 32px;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  color: var(--border-normal);
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.emptyDesc {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.emptyLink {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Table */
+.table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.tableHead {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 80px 80px 110px 1.5fr 40px;
+  padding: 10px 20px;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-dim);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  gap: 12px;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 80px 80px 110px 1.5fr 40px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-dim);
+  text-decoration: none;
+  align-items: center;
+  gap: 12px;
+  animation: slideIn 0.3s ease both;
+  transition: background 0.15s;
+}
+.tableRow:last-child { border-bottom: none; }
+.tableRow:hover { background: var(--bg-elevated); }
+
+.runName {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-bright);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-dim);
+  overflow: hidden;
+}
+.slash { color: var(--border-normal); }
+
+.total {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.failCount {
+  font-size: 12px;
+  color: var(--accent-red);
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+.passCount {
+  font-size: 12px;
+  color: var(--accent-green);
+  font-family: var(--font-mono);
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.badge_green { background: rgba(0,255,157,0.1); color: var(--accent-green); }
+.badge_red { background: rgba(255,56,96,0.1); color: var(--accent-red); }
+.badge_yellow { background: rgba(255,209,102,0.1); color: var(--accent-yellow); }
+.badge_dim { background: var(--bg-elevated); color: var(--text-dim); }
+
+.date {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.deleteBtn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--text-dim);
+  font-size: 10px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.deleteBtn:hover:not(:disabled) {
+  color: var(--accent-red);
+  border-color: rgba(255,56,96,0.3);
+  background: rgba(255,56,96,0.06);
+}
+.deleteBtn:disabled { opacity: 0.4; cursor: not-allowed; }
